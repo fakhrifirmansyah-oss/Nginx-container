@@ -10,6 +10,32 @@ Dokumentasi lengkap deployment web server **Nginx** dengan custom `index.html` m
 
 ---
 
+## ⚡ Cara Cepat Menjalankan (1 Perintah)
+
+Repository ini sudah dilengkapi dengan runner script `run.sh` dan `Makefile` sehingga kamu tidak perlu mengetik perintah panjang secara manual.
+
+### Opsi A: Menggunakan `make`
+```bash
+make run      # Jalankan Task 1 (Podman Run) -> http://localhost:8080
+make compose  # Jalankan Task 2 (Podman Compose) -> http://localhost:8081
+make tofu     # Jalankan Task 3 (OpenTofu IaC) -> http://localhost:8082
+make test     # Cek & test curl semua port
+make status   # Tampilkan container yang aktif
+make clean    # Hentikan & bersihkan semua container
+```
+
+### Opsi B: Menggunakan Menu Interaktif `./run.sh`
+```bash
+./run.sh      # Muncul menu pilihan [1-5], tinggal ketik angka!
+# Atau langsung dengan argumen:
+./run.sh 1    # Jalankan Podman Run
+./run.sh 2    # Jalankan Podman Compose
+./run.sh 3    # Jalankan OpenTofu
+./run.sh clean# Bersihkan semua
+```
+
+---
+
 ## Struktur Repository
 
 ```text
