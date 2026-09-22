@@ -1,0 +1,9 @@
+# Terraform / OpenTofu state & cache
+**/.terraform/
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+
+# OS & Temp
+.DS_Store
+Thumbs.db
